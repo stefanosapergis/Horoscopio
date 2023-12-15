@@ -1,0 +1,52 @@
+{
+  "znakiZodiaku": [
+    {
+      "nazwa": "Baran",
+      "daty": "21 marca - 19 kwietnia"
+    },
+    {
+      "nazwa": "Byk",
+      "daty": "20 kwietnia - 20 maja"
+    },
+    {
+      "nazwa": "Bliźnięta",
+      "daty": "21 maja - 20 czerwca"
+    },
+    {
+      "nazwa": "Rak",
+      "daty": "21 czerwca - 22 lipca"
+    },
+    {
+      "nazwa": "Lew",
+      "daty": "23 lipca - 22 sierpnia"
+    },
+    {
+      "nazwa": "Panna",
+      "daty": "23 sierpnia - 22 września"
+    },
+    {
+      "nazwa": "Waga",
+      "daty": "23 września - 22 października"
+    },
+    {
+      "nazwa": "Skorpion",
+      "daty": "23 października - 21 listopada"
+    },
+    {
+      "nazwa": "Strzelec",
+      "daty": "22 listopada - 21 grudnia"
+    },
+    {
+      "nazwa": "Koziorożec",
+      "daty": "22 grudnia - 19 stycznia"
+    },
+    {
+      "nazwa": "Wodnik",
+      "daty": "20 stycznia - 18 lutego"
+    },
+    {
+      "nazwa": "Ryby",
+      "daty": "19 lutego - 20 marca"
+    }
+  ]
+}
