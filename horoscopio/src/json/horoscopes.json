@@ -63,10 +63,8 @@
   {"dzien_roku": 7, "znak_zodiaku": "Panna", "płeć": "mężczyzna", "horoskop": "Siódmy dzień, szukaj równowagi w życiu. Zadbaj o harmonię między pracą a życiem prywatnym."},
   {"dzien_roku": 8, "znak_zodiaku": "Panna", "płeć": "kobieta", "horoskop": "Ósmy dzień, szukaj nowych inspiracji. Otwórz się na różnorodne źródła kreatywności."},
   {"dzien_roku": 9, "znak_zodiaku": "Panna", "płeć": "mężczyzna", "horoskop": "Dziewiąty dzień, dbaj o swoje zdrowie. Zwróć uwagę na dietę i aktywność fizyczną."},
-  {"dzien_roku": 10, "znak_zodiaku": "Panna", "płeć": "kobieta", "horoskop": "Dziesiąty dzień, pielęgnuj zdrowe nawyki. Zadbaj o równowagę między pracą a życiem osobistym."}
+  {"dzien_roku": 10, "znak_zodiaku": "Panna", "płeć": "kobieta", "horoskop": "Dziesiąty dzień, pielęgnuj zdrowe nawyki. Zadbaj o równowagę między pracą a życiem osobistym."},
 
-  
-    {"dzien_roku": 10, "znak_zodiaku": "Baran", "płeć": "kobieta", "horoskop": "Dziesiąty dzień, utrzymuj zdrowe relacje. Buduj pozytywne i wspierające więzi."},
     {"dzien_roku": 1, "znak_zodiaku": "Waga", "płeć": "mężczyzna", "horoskop": "Pierwszy dzień, eksploruj nowe obszary wiedzy. Otwórz się na nowe pomysły i bądź gotów uczyć się czegoś nowego."},
     {"dzien_roku": 2, "znak_zodiaku": "Waga", "płeć": "kobieta", "horoskop": "Drugi dzień, skup się na pracy zespołowej. Twoje umiejętności komunikacyjne są kluczowe, aby osiągnąć wspólne cele."},
     {"dzien_roku": 3, "znak_zodiaku": "Waga", "płeć": "mężczyzna", "horoskop": "Trzeci dzień, szukaj równowagi w życiu. Znajdź czas na relaks i dbaj o swoje zdrowie zarówno psychiczne, jak i fizyczne."},
@@ -77,6 +75,7 @@
     {"dzien_roku": 8, "znak_zodiaku": "Waga", "płeć": "kobieta", "horoskop": "Ósmy dzień, poszukaj inspiracji w sztuce. Odkryj piękno i głęboką wartość w różnych formach artystycznego wyrażania."},
     {"dzien_roku": 9, "znak_zodiaku": "Waga", "płeć": "mężczyzna", "horoskop": "Dziewiąty dzień, podejmuj decyzje z sercem. Posłuchaj swoich uczuć i postępuj zgodnie z własnymi wartościami."},
     {"dzien_roku": 10, "znak_zodiaku": "Waga", "płeć": "kobieta", "horoskop": "Dziesiąty dzień, szukaj równowagi między pracą a życiem prywatnym. Zachowaj harmonię i dbaj o swoje dobre samopoczucie."},
+    
     {"dzien_roku": 1, "znak_zodiaku": "Skorpion", "płeć": "mężczyzna", "horoskop": "Pierwszy dzień, skoncentruj się na odkrywaniu ukrytych tajemnic. Zbadaj głębokie aspekty swojej duszy i poszukaj wewnętrznej mądrości."},
     {"dzien_roku": 2, "znak_zodiaku": "Skorpion", "płeć": "kobieta", "horoskop": "Drugi dzień, rozwijaj swoje zdolności intuicyjne. Słuchaj głosu swojego wewnętrznego instynktu i ufaj swoim przeczuciom."},
     {"dzien_roku": 3, "znak_zodiaku": "Skorpion", "płeć": "mężczyzna", "horoskop": "Trzeci dzień, zainicjuj pozytywne zmiany. Bądź gotów na przekształcenie swojego życia i otwórz się na nowe możliwości."},
@@ -87,6 +86,7 @@
     {"dzien_roku": 8, "znak_zodiaku": "Skorpion", "płeć": "kobieta", "horoskop": "Ósmy dzień, poszukaj wewnętrznej siły. Odkryj swoje ukryte talenty i wykorzystaj je do osiągania celów."},
     {"dzien_roku": 9, "znak_zodiaku": "Skorpion", "płeć": "mężczyzna", "horoskop": "Dziewiąty dzień, podejmuj decyzje z determinacją. Bądź pewny swoich wyborów i śmiało kieruj się ku własnym celom."},
     {"dzien_roku": 10, "znak_zodiaku": "Skorpion", "płeć": "kobieta", "horoskop": "Dziesiąty dzień, utrzymuj zdrowe granice. Dbaj o równowagę między sobą a innymi, chroniąc swoje dobre samopoczucie."},
+    
     {"dzien_roku": 1, "znak_zodiaku": "Strzelec", "płeć": "mężczyzna", "horoskop": "Pierwszy dzień, rozbudź swoją ciekawość. Poszukaj nowych inspiracji i zdobądź wiedzę, która poszerzy twoje horyzonty."},
     {"dzien_roku": 2, "znak_zodiaku": "Strzelec", "płeć": "kobieta", "horoskop": "Drugi dzień, skup się na duchowym rozwoju. Praktykuj medytację lub refleksję, aby odnaleźć spokój wewnętrzny."},
     {"dzien_roku": 3, "znak_zodiaku": "Strzelec", "płeć": "mężczyzna", "horoskop": "Trzeci dzień, planuj swoją przyszłość. Określ cele i strategie, które pomogą ci osiągnąć sukces w długoterminowej perspektywie."},
@@ -97,6 +97,7 @@
     {"dzien_roku": 8, "znak_zodiaku": "Strzelec", "płeć": "kobieta", "horoskop": "Ósmy dzień, rozwijaj swoją kreatywność. Poszukaj nowych form wyrażania siebie i czerp radość z twórczego procesu."},
     {"dzien_roku": 9, "znak_zodiaku": "Strzelec", "płeć": "mężczyzna", "horoskop": "Dziewiąty dzień, podejmuj ryzyko z rozwagą. Szukaj nowych wyzwań, ale bądź świadomy konsekwencji swoich działań."},
     {"dzien_roku": 10, "znak_zodiaku": "Strzelec", "płeć": "kobieta", "horoskop": "Dziesiąty dzień, utrzymuj zdrowe granice. Dbaj o równowagę między pracą a życiem prywatnym dla zachowania dobrej kondycji psychicznej."},
+    
     {"dzien_roku": 1, "znak_zodiaku": "Koziorożec", "płeć": "mężczyzna", "horoskop": "Pierwszy dzień, skup się na budowaniu solidnych fundamentów. Określ klarowne cele i podejmuj kroki, aby osiągnąć trwały sukces."},
     {"dzien_roku": 2, "znak_zodiaku": "Koziorożec", "płeć": "kobieta", "horoskop": "Drugi dzień, dbaj o równowagę między pracą a życiem prywatnym. Znajdź sposoby na efektywne zarządzanie czasem i energią."},
     {"dzien_roku": 3, "znak_zodiaku": "Koziorożec", "płeć": "mężczyzna", "horoskop": "Trzeci dzień, rozwijaj swoje umiejętności przywódcze. Zostań liderem, który inspiruje innych do osiągania wspólnych celów."},
@@ -107,6 +108,7 @@
     {"dzien_roku": 8, "znak_zodiaku": "Koziorożec", "płeć": "kobieta", "horoskop": "Ósmy dzień, szukaj inspiracji w sztuce. Odkryj piękno i wartość w różnych formach artystycznego wyrażania."},
     {"dzien_roku": 9, "znak_zodiaku": "Koziorożec", "płeć": "mężczyzna", "horoskop": "Dziewiąty dzień, utrzymuj zdrowe relacje z innymi. Buduj pozytywne więzi, które wspierają cię w trudnych chwilach."},
     {"dzien_roku": 10, "znak_zodiaku": "Koziorożec", "płeć": "kobieta", "horoskop": "Dziesiąty dzień, skup się na samorozwoju. Inwestuj w siebie i swoje umiejętności dla osiągnięcia osobistego sukcesu."},
+    
     {"dzien_roku": 1, "znak_zodiaku": "Wodnik", "płeć": "mężczyzna", "horoskop": "Pierwszy dzień, poszukaj nowych perspektyw. Otwórz umysł na nowe idee i innowacje, które mogą zmienić twoje życie."},
     {"dzien_roku": 2, "znak_zodiaku": "Wodnik", "płeć": "kobieta", "horoskop": "Drugi dzień, skoncentruj się na współpracy. Twoje umiejętności zespołowe są kluczowe dla osiągania wspólnych celów."},
     {"dzien_roku": 3, "znak_zodiaku": "Wodnik", "płeć": "mężczyzna", "horoskop": "Trzeci dzień, angażuj się społecznie. Znajdź sposób, aby przyczynić się do dobra społeczności."},
@@ -117,6 +119,7 @@
     {"dzien_roku": 8, "znak_zodiaku": "Wodnik", "płeć": "kobieta", "horoskop": "Ósmy dzień, skup się na sztuce samowyrażania. Odkryj różne formy wyrażania siebie, które przynoszą ci radość."},
     {"dzien_roku": 9, "znak_zodiaku": "Wodnik", "płeć": "mężczyzna", "horoskop": "Dziewiąty dzień, podejmuj decyzje z odwagą. Nie obawiaj się ryzyka i śmiało dąż do swoich celów."},
     {"dzien_roku": 10, "znak_zodiaku": "Wodnik", "płeć": "kobieta", "horoskop": "Dziesiąty dzień, utrzymuj zdrowe relacje. Buduj pozytywne i wspierające więzi z ludźmi wokół siebie."},
+    
     {"dzien_roku": 1, "znak_zodiaku": "Ryby", "płeć": "mężczyzna", "horoskop": "Pierwszy dzień, zgłębiaj swoją intuicję. Posłuchaj swojego wewnętrznego głosu, który może prowadzić cię do ważnych odkryć."},
     {"dzien_roku": 2, "znak_zodiaku": "Ryby", "płeć": "kobieta", "horoskop": "Drugi dzień, skup się na emocjonalnym samorozwoju. Znajdź czas na zrozumienie i akceptację swoich uczuć."},
     {"dzien_roku": 3, "znak_zodiaku": "Ryby", "płeć": "mężczyzna", "horoskop": "Trzeci dzień, poświęć czas medytacji. Znalezienie wewnętrznego spokoju pomoże ci zregenerować siły."},
@@ -127,6 +130,5 @@
     {"dzien_roku": 8, "znak_zodiaku": "Ryby", "płeć": "kobieta", "horoskop": "Ósmy dzień, poświęć czas na introspekcję. Zastanów się nad swoimi celami i wartościami życiowymi."},
     {"dzien_roku": 9, "znak_zodiaku": "Ryby", "płeć": "mężczyzna", "horoskop": "Dziewiąty dzień, podejmuj decyzje z empatią. Zrozumienie perspektywy innych pomoże ci podejmować mądre decyzje."},
     {"dzien_roku": 10, "znak_zodiaku": "Ryby", "płeć": "kobieta", "horoskop": "Dziesiąty dzień, utrzymuj zdrowe relacje. Buduj pozytywne i wspierające więzi z ludźmi wokół siebie."}
-
-
+    
 ]
