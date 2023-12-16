@@ -15,13 +15,14 @@ const HoroscopePage = () => {
   const day = searchParams.get("day");
   const year = searchParams.get("year");
   const month = searchParams.get("month");
-  
+
+
   const randomNumber = Math.floor(Math.random() * 10) + 1;
 
 
-  
+  // const imgPath = require(`./images/${znakZodiaku}/01.png`)
   function getZodiacSign(dayS, monthS) {
-    
+
     const day = +dayS;
     const month = +monthS;
 
@@ -54,56 +55,78 @@ const HoroscopePage = () => {
       return "Nieprawidłowa data";
     }
   }
-  
- 
-  
+
+
+
   const znakZodiaku = getZodiacSign(day, month);
 
-  
+
   function generujHoroskop(dzienRoku, znakZodiaku, plec) {
     const horoskopy = horoscopes;
-  
 
-const znalezionyHoroskop = horoskopy.find(
-  element => element.znak_zodiaku === znakZodiaku && element.dzien_roku === randomNumber
-);
+
+    const znalezionyHoroskop = horoskopy.find(
+      element => element.znak_zodiaku === znakZodiaku && element.dzien_roku === randomNumber
+    );
     if (znalezionyHoroskop) {
       return znalezionyHoroskop.horoskop;
     } else {
 
-      
+
       return "Brak horoskopu dla podanych parametrów.";
     }
   }
-  
+
   // Przykłady użycia:
-  
+
   // ... dodaj inne przypadki, aby sprawdzić poprawność dla różnych dni, znaków zodiaku i płci
-  
+
+
+  function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  // Losowanie liczby od 1 do 3
+  const randomValue = getRandomNumber(1, 3);
+
+  const imgPath = require(`./images/${znakZodiaku}/0${randomValue}.png`)
+
+  console.log('dzien number: ', day)
+
+  const containerStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    // Dodaj dodatkowe style według potrzeb
+  };
+
+  const textContainerStyle = {
+    // Dodaj style dla kontenera tekstu
+  };
+
+  const imageContainerStyle = {
+    // Dodaj style dla kontenera obrazu
+  };
+
+  // Dodaj media queries, aby dostosować styl do różnych rozmiarów ekranu
+  const mediaQueryStyle = {
+    '@media screen and (min-width: 768px)': {
+      flexDirection: 'row',
+    },
+  };
 
   return (
-    <div>
-      <h2>Your Horoscope Page</h2>
-      
-      
-
-     
-     {generujHoroskop(day, znakZodiaku, sex)}
-      
-      {/* Add your horoscope content here */}
-      {
-      // 1. import the horoscope file
-      // 2. show the first item with horoscope
-      // 3. generate number from 1 tov 1
-
-
-      // 4. based on the date of birth find the type of the zodiac sign
-      // 5. use parameter sex
-      // 6. filter table based on the parameters
-      }
+    <div style={{ ...containerStyle, ...mediaQueryStyle }}>
+      <div style={textContainerStyle}>
+        <h2>Your Horoscope Page</h2>
+        <h3>{znakZodiaku}</h3>
+        {generujHoroskop(day, znakZodiaku, sex)}
+      </div>
+      <div style={imageContainerStyle}>
+        <img src={imgPath} alt={znakZodiaku} />
+      </div>
     </div>
   );
-};
+}
 
 const HoroscopeForm = () => {
   const [name, setName] = useState("");
