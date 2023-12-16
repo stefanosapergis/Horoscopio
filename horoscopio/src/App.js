@@ -17,8 +17,7 @@ const HoroscopePage = () => {
   const month = searchParams.get("month");
 
 
-
-
+  const [render, setRender] = useState(false);
 
   const randomNumber = Math.floor(Math.random() * 10) + 1;
 
@@ -91,63 +90,9 @@ const HoroscopePage = () => {
 
   // Losowanie liczby od 1 do 3
   const randomValue = getRandomNumber(1, 3);
-  const path = `../public/images/${znakZodiaku}/0${randomValue}.png`;
+  const path = `/images/${znakZodiaku}/0${randomValue}.png`;
   const imgPath = require(`../public/images/${znakZodiaku}/0${randomValue}.png`)
 
-
-
-  function pobierzKolorSredni(obrazekUrl) {
-    const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d');
-    const obrazek = new Image();
-
-    return new Promise((resolve, reject) => {
-      obrazek.onload = function () {
-        canvas.width = obrazek.width;
-        canvas.height = obrazek.height;
-
-        context.drawImage(obrazek, 0, 0, obrazek.width, obrazek.height);
-
-        const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-        const pixels = imageData.data;
-
-        let sumaR = 0;
-        let sumaG = 0;
-        let sumaB = 0;
-
-        for (let i = 0; i < pixels.length; i += 4) {
-          sumaR += pixels[i];
-          sumaG += pixels[i + 1];
-          sumaB += pixels[i + 2];
-        }
-
-        const sredniKolor = {
-          r: Math.round(sumaR / (pixels.length / 4)),
-          g: Math.round(sumaG / (pixels.length / 4)),
-          b: Math.round(sumaB / (pixels.length / 4)),
-        };
-
-        resolve(sredniKolor);
-      };
-
-      obrazek.onerror = function (error) {
-        reject(error);
-      };
-
-      obrazek.src = obrazekUrl;
-    });
-  }
-
-  // Przykład użycia
-  const obrazekUrl = 'sciezka/do/twojego/obrazka.png';
-
-  pobierzKolorSredni(path)
-    .then((sredniKolor) => {
-      alert('Średni kolor:', sredniKolor);
-    })
-    .catch((error) => {
-      console.error('Błąd podczas pobierania koloru:', error);
-    });
 
 
   console.log('dzien number: ', day)
@@ -251,37 +196,38 @@ const HoroscopeForm = () => {
 
   return (
     <div className="form-container">
+      <h1 style={{ color: 'white' }}>Horoscopio</h1>
       <label>
-        Name:
+        Imię:
         <input
           type="text"
-          placeholder="Enter your name"
+          placeholder="Wpisz swoje imię"
           value={name}
           onChange={(e) => setName(e.target.value)}
           style={inputStyle}
         />
       </label>
       <label>
-        Sex:
+        Płeć:
         <select
           value={sex}
           onChange={(e) => setSex(e.target.value)}
           style={selectStyle}
         >
-          <option value="">Select your sex</option>
+          <option value="">Wybierz swoją płeć</option>
           <option value="kobieta">Kobieta</option>
           <option value="mężczyzna">Mężczyzna</option>
         </select>
       </label>
       <label>
-        Date of Birth:
+        Data urodzin
         <div>
           <select
             value={day}
             onChange={(e) => setDay(e.target.value)}
             style={selectStyle}
           >
-            <option value="">Day</option>
+            <option value="">Dzień</option>
             {Array.from({ length: 31 }, (_, index) => (
               <option key={index + 1} value={index + 1}>
                 {index + 1}
@@ -294,7 +240,7 @@ const HoroscopeForm = () => {
             onChange={(e) => setMonth(e.target.value)}
             style={selectStyle}
           >
-            <option value="">Month</option>
+            <option value="">Miesiąc</option>
             {months.map((month, index) => (
               <option key={index + 1} value={index + 1}>
                 {month}
@@ -307,7 +253,7 @@ const HoroscopeForm = () => {
             onChange={(e) => setYear(e.target.value)}
             style={selectStyle}
           >
-            <option value="">Year</option>
+            <option value="">Rok</option>
             {Array.from({ length: 105 }, (_, index) => (
               <option key={index + 1920} value={index + 1920}>
                 {index + 1920}
