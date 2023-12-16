@@ -17,6 +17,9 @@ const HoroscopePage = () => {
   const month = searchParams.get("month");
 
 
+
+
+
   const randomNumber = Math.floor(Math.random() * 10) + 1;
 
 
@@ -88,20 +91,100 @@ const HoroscopePage = () => {
 
   // Losowanie liczby od 1 do 3
   const randomValue = getRandomNumber(1, 3);
+  const path = `../public/images/${znakZodiaku}/0${randomValue}.png`;
+  const imgPath = require(`../public/images/${znakZodiaku}/0${randomValue}.png`)
 
-  const imgPath = require(`./images/${znakZodiaku}/0${randomValue}.png`)
+
+
+  function pobierzKolorSredni(obrazekUrl) {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    const obrazek = new Image();
+
+    return new Promise((resolve, reject) => {
+      obrazek.onload = function () {
+        canvas.width = obrazek.width;
+        canvas.height = obrazek.height;
+
+        context.drawImage(obrazek, 0, 0, obrazek.width, obrazek.height);
+
+        const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+        const pixels = imageData.data;
+
+        let sumaR = 0;
+        let sumaG = 0;
+        let sumaB = 0;
+
+        for (let i = 0; i < pixels.length; i += 4) {
+          sumaR += pixels[i];
+          sumaG += pixels[i + 1];
+          sumaB += pixels[i + 2];
+        }
+
+        const sredniKolor = {
+          r: Math.round(sumaR / (pixels.length / 4)),
+          g: Math.round(sumaG / (pixels.length / 4)),
+          b: Math.round(sumaB / (pixels.length / 4)),
+        };
+
+        resolve(sredniKolor);
+      };
+
+      obrazek.onerror = function (error) {
+        reject(error);
+      };
+
+      obrazek.src = obrazekUrl;
+    });
+  }
+
+  // Przykład użycia
+  const obrazekUrl = 'sciezka/do/twojego/obrazka.png';
+
+  pobierzKolorSredni(path)
+    .then((sredniKolor) => {
+      alert('Średni kolor:', sredniKolor);
+    })
+    .catch((error) => {
+      console.error('Błąd podczas pobierania koloru:', error);
+    });
+
 
   console.log('dzien number: ', day)
 
   const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
+    height: '100%',
     // Dodaj dodatkowe style według potrzeb
   };
 
   const textContainerStyle = {
-    // Dodaj style dla kontenera tekstu
+    backgroundImage: `url(${imgPath})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center', // Wyśrodkuj tło
+    padding: '20px', // Dodaj padding, aby tekst nie przyklejał się bezpośrednio do tła
+    color: '#fff',
+    border: 10,
+    height: '100%',
+    alignItems: 'center',
+    display: 'flex'
+
   };
+
+  const horoskopStyle = {
+    backgroundColor: 'rgba(128, 128, 128, 0.5)',
+    padding: '10px',
+    fontSize: '35px',
+    height: '100%', // Ustawienie wysokości na 200
+    display: 'flex',
+    alignItems: 'center', // Wyśrodkuj w poziomie
+    fontFamily: 'Lora, serif', // Dodaj czcionkę Lora i fallback na serif
+    flexDirection: 'column',
+    justifyContent: 'space-between'
+
+  }
 
   const imageContainerStyle = {
     // Dodaj style dla kontenera obrazu
@@ -111,18 +194,18 @@ const HoroscopePage = () => {
   const mediaQueryStyle = {
     '@media screen and (min-width: 768px)': {
       flexDirection: 'row',
+      height: '100%'
     },
   };
 
   return (
     <div style={{ ...containerStyle, ...mediaQueryStyle }}>
       <div style={textContainerStyle}>
-        <h2>Your Horoscope Page</h2>
-        <h3>{znakZodiaku}</h3>
-        {generujHoroskop(day, znakZodiaku, sex)}
-      </div>
-      <div style={imageContainerStyle}>
-        <img src={imgPath} alt={znakZodiaku} />
+        <div style={horoskopStyle}>
+          <h2 style={{ fontSize: '30px', textTransform: 'uppercase' }}> {name}</h2>
+          <div style={{ textAlign: 'center' }}>{generujHoroskop(day, znakZodiaku, sex)}</div>
+          <div style={{ fontSize: '30px', textTransform: 'uppercase' }}>{znakZodiaku}</div>
+        </div>
       </div>
     </div>
   );
